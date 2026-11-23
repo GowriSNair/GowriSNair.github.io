@@ -175,21 +175,21 @@
     <article class="project">
       <div>
         <p class="project-meta">Short-term rental market, Vancouver</p>
-        <h2 class="finding">Vancouver's Airbnb market splits into four kinds of listing, and guests reward the same few things in all of them.</h2>
-        <p>I segmented 4,705 listings with K-Means and PCA, then scored 277,819 guest reviews for sentiment. Price barely correlated with any single listing feature, so the segments explain pricing better than the raw numbers do.</p>
-        <p>Cleanliness, comfort, location and host communication drove positive reviews; noise and inaccurate photos drove complaints. Flexible mid-range listings had the strongest sentiment.</p>
-        <p class="tools">Python, Scikit-learn, NLTK (VADER), Power BI, Tableau</p>
+        <h2 class="finding">Almost a third of Vancouver's Airbnb listings now ask guests to stay a month or more.</h2>
+        <p>I segmented 6,131 listings with K-Means and PCA, then scored 346,553 guest reviews for sentiment. The market splits into four groups, and the strongest price signal among the numbers is minimum stay: monthly-minimum listings charge far less per night.</p>
+        <p>Guests praise location, cleanliness and communication. Dirtiness, smell and noise are what show up in complaints. The share of positive reviews has slipped from 96% in 2021 to 88% in 2026. I built an interactive Streamlit dashboard to explore it all.</p>
+        <p class="tools">Python, Scikit-learn, NLTK (VADER), Streamlit, Plotly</p>
         <p class="project-links"><a href="https://github.com/GowriSNair/airbnb-vancouver-segmentation">See the code and results</a></p>
       </div>
       <figure class="chart">
         <p class="chart-title">The four market segments</p>
         <ul class="segments">
-          <li><strong>High-performing mid-range</strong><span>Flexible stays, many reviews, highest occupancy. Strongest positive sentiment.</span></li>
-          <li><strong>Premium family homes</strong><span>Large, expensive, built for groups. Very positive, fewer reviews.</span></li>
-          <li><strong>Budget small listings</strong><span>Cheapest, longer minimum stays, lower ratings.</span></li>
-          <li><strong>Long-term professional units</strong><span>One-month minimum, run by multi-listing hosts. More neutral reviews.</span></li>
+          <li><strong>Short-stay homes, 3,595 listings</strong><span>Entire homes, about a 2-night minimum, the most reviews. Median $353 a night.</span></li>
+          <li><strong>Monthly rentals, 1,300 listings</strong><span>Entire homes with a 30-night minimum. Median $151. Happiest guests: 92.6% positive.</span></li>
+          <li><strong>Private rooms, 1,013 listings</strong><span>Rooms in shared homes. Median $150. Weakest sentiment: 86% positive.</span></li>
+          <li><strong>Multi-listing operators, 223 listings</strong><span>Hosts running around 125 listings each, mostly long stays. Median $87.</span></li>
         </ul>
-        <figcaption>Clusters from K-Means (K = 4), profiled against price, size, stay length and review sentiment.</figcaption>
+        <figcaption>K-Means clusters (K = 4) on the Inside Airbnb snapshot of 17 September 2026.</figcaption>
       </figure>
     </article>
 
